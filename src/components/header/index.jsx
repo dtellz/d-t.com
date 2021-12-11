@@ -33,7 +33,7 @@ const Header = () => {
                     <Radio value='left'>Left</Radio>
                 </Stack>
             </RadioGroup> */}
-            <input type='button' value='navigate' className='header__navigate-btn' onClick={onOpen} />
+            <input type='button' value={traduction("header.btn")} className='header__navigate-btn' onClick={onOpen} />
             <Drawer placement='top' onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay />
                 <DrawerContent>
