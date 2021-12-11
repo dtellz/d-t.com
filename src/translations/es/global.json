@@ -1,0 +1,13 @@
+{
+    "landing": {
+        "welcome": "Bienvenido a ",
+        "title": "DESARROLLADOR DE SOFTWARE",
+        "projects": "Mira algunos de mis",
+        "github": "mejores proyectos",
+        "profile": "Visita mi"
+    },
+    "header": {
+        "title": "BIENVENID@",
+        "btn": "Navega"
+    }
+}

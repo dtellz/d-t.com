@@ -1,0 +1,13 @@
+{
+    "landing": {
+        "welcome": "Welcome to ",
+        "title": "SOFTWARE DEVELOPER",
+        "projects": "Check some of my",
+        "github": "best projects",
+        "profile": "Visit my"
+    },
+    "header": {
+        "title": "WELCOME",
+        "btn": "Navigate"
+    }
+}

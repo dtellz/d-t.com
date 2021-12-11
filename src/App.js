@@ -1,27 +1,38 @@
 import logo from '../src/assets/gif/in-progress.gif';
 import './App.css';
+import React, { useContext } from "react";
+import { ThemeContext } from "./theme";
+import Header from './components/header';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
+  const [traduction] = useTranslation('global')
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header className={darkMode ? 'App-header-dark' : 'App-header'}>
+        <Header className='landing__header-nav-btn' />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome to diego-tellez.com
+          {traduction("landing.welcome")} diego-tellez.com
         </p>
-        <p class="landing__career">
-          SOFTWARE DEVELOPER
+        <p className="landing__career">
+          {traduction("landing.title")}
         </p>
-        <p>Check some of my <a
+        <p>{traduction("landing.projects")} <a
           className="App-link"
           href="https://github.com/dtellz"
           target="_blank"
           rel="noopener noreferrer"
         >
-          best projects
+          {traduction("landing.github")}
         </a> </p>
 
-        <p>Visit my <a
+        <p>{traduction("landing.profile")} <a
           className="App-link"
           href="https://www.linkedin.com/in/diegotellezbarrero/"
           target="_blank"
