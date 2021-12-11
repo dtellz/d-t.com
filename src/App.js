@@ -4,13 +4,25 @@ import React, { useContext } from "react";
 import { ThemeContext } from "./theme";
 import Header from './components/header';
 import { useTranslation } from 'react-i18next';
+import IconButton from '@mui/material/IconButton';
+import esImg from './assets/language/es-lang.png'
+import enImg from './assets/language/en-lang.png'
 
 function App() {
 
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  const [traduction] = useTranslation('global')
+  const [traduction, setLanguage] = useTranslation('global')
+
+  const switchLanguageES = () => {
+    setLanguage.changeLanguage('es')
+    /*    setAnchorEl3(null); */
+  }
+  const switchLanguageEN = () => {
+    setLanguage.changeLanguage('en')
+    /*     setAnchorEl3(null); */
+  }
 
   return (
     <div className="App">
@@ -40,6 +52,11 @@ function App() {
         >
           LinkedIn
         </a> </p>
+        <div className='landing__lang-btns'>
+          <img onClick={switchLanguageES} alt='es_language' src={esImg} height='25' width='25'></img>
+          <img onClick={switchLanguageEN} alt='en_language' src={enImg} height='25' width='25'></img>
+        </div>
+
 
 
       </header>
