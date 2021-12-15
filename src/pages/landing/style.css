@@ -19,7 +19,7 @@
     flex-direction: row;
     gap: 1rem;
   }
-  .App-header {
+  .App-header-dark {
     background-color: #000000;
     min-height: 100vh;
     display: flex;
@@ -29,6 +29,18 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+  }
+
+  .App-header-light{
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
   }
   
   .App-link {
@@ -46,4 +58,24 @@
   .landing__header-nav-btn{
     padding-bottom: 5rem;
   }
+  .landing__btn{
+    cursor: pointer;
+  }
+  .landing__btn:hover{
+    transform: scale(1.2,1.2);
+  }
+  .landing__btn:active{
+    transform: scale(1.5,1.5);
+  }
+  .landing__darkMode-btn{
+    background-color: lime !important;
+  }
+  .landing__darkMode-btn:hover{
+    background-color: rgb(87, 245, 87) !important;
+  }
+  .landing__darkMode-btn:active{
+    transform: scale(1.5,1.5);
+  }
+
+
   

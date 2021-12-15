@@ -4,7 +4,7 @@ import React, { createContext, useReducer } from "react";
 export const ThemeContext = createContext();
 
 const initialState = {
-    darkMode: false,
+    darkMode: true,
 };
 
 const themeReducer = (state, action) => {

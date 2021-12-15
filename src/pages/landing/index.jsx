@@ -4,9 +4,12 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../theme";
 import Header from '../../components/header';
 import { useTranslation } from 'react-i18next';
-import IconButton from '@mui/material/IconButton';
+import { IconButton } from '@chakra-ui/react'
 import esImg from '../../assets/language/es-lang.png'
 import enImg from '../../assets/language/en-lang.png'
+import { SunIcon, MoonIcon } from '@chakra-ui/icons'
+
+
 
 function Landing() {
 
@@ -23,10 +26,17 @@ function Landing() {
         setLanguage.changeLanguage('en')
         /*     setAnchorEl3(null); */
     }
+    const handleMode = () => {
+        if (darkMode)
+            theme.dispatch({ type: "LIGHTMODE" });
+        else
+            theme.dispatch({ type: "DARKMODE" });
+    }
+
 
     return (
         <div className="App">
-            <header className={darkMode ? 'App-header-dark' : 'App-header'}>
+            <header className={darkMode ? 'App-header-dark' : 'App-header-light'}>
                 <Header className='landing__header-nav-btn' />
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>
@@ -53,9 +63,10 @@ function Landing() {
                     LinkedIn
                 </a> </p>
                 <div className='landing__lang-btns'>
-                    <img onClick={switchLanguageES} alt='es_language' src={esImg} height='25' width='25'></img>
-                    <img onClick={switchLanguageEN} alt='en_language' src={enImg} height='25' width='25'></img>
+                    <img onClick={switchLanguageES} alt='es_language' src={esImg} height='25' width='25' className='landing__btn'></img>
+                    <img onClick={switchLanguageEN} alt='en_language' src={enImg} height='25' width='25' className='landing__btn'></img>
                 </div>
+                <IconButton borderRadius='50%' aria-label='Search database' color='black' className='landing__darkMode-btn' onClick={handleMode} icon={darkMode ? <SunIcon /> : <MoonIcon />} />
             </header>
         </div>
     );

@@ -1,7 +1,6 @@
 .header__navigate-btn{
     background-color: lime;
     color: black;
-    margin-top: -4rem;
     width: 150px;
     height: 35px;
     border-radius: 15px;
@@ -14,3 +13,7 @@
     background-color: limegreen;
     color: black;
 }
+.header__navigate-btn:active{
+    transform: scale(1.2, 1.2);
+}
+
