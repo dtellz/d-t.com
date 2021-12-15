@@ -11,9 +11,6 @@ import './style.css'
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from "../../theme";
 import { useContext } from 'react';
-
-
-
 import { useState } from "react"
 
 
