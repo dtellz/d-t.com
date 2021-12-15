@@ -4,11 +4,11 @@ import React, { useContext } from "react";
 import { ThemeContext } from "../../theme";
 import Header from '../../components/header';
 import { useTranslation } from 'react-i18next';
-import { IconButton } from '@chakra-ui/react'
+import { Icon, IconButton } from '@chakra-ui/react'
 import esImg from '../../assets/language/es-lang.png'
 import enImg from '../../assets/language/en-lang.png'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
-
+import { GiForwardSun, GiMoonBats } from "react-icons/gi";
 
 
 function Landing() {
@@ -46,7 +46,7 @@ function Landing() {
                     {traduction("landing.title")}
                 </p>
                 <p>{traduction("landing.projects")} <a
-                    className="App-link"
+                    className={darkMode ? 'App-link' : 'App-link light'}
                     href="https://github.com/dtellz"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -55,7 +55,7 @@ function Landing() {
                 </a> </p>
 
                 <p>{traduction("landing.profile")} <a
-                    className="App-link"
+                    className={darkMode ? 'App-link' : 'App-link light'}
                     href="https://www.linkedin.com/in/diegotellezbarrero/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -66,7 +66,7 @@ function Landing() {
                     <img onClick={switchLanguageES} alt='es_language' src={esImg} height='25' width='25' className='landing__btn'></img>
                     <img onClick={switchLanguageEN} alt='en_language' src={enImg} height='25' width='25' className='landing__btn'></img>
                 </div>
-                <IconButton borderRadius='50%' aria-label='Search database' color='black' className='landing__darkMode-btn' onClick={handleMode} icon={darkMode ? <SunIcon /> : <MoonIcon />} />
+                <IconButton borderRadius='50%' aria-label='Search database' color='black' className={darkMode ? 'landing__darkMode-btn' : 'landing__darkMode-btn-light'} onClick={handleMode} icon={darkMode ? <Icon w={30} h={30} as={GiForwardSun} /> : <Icon w={30} h={30} as={GiMoonBats} />} />
             </header>
         </div>
     );

@@ -44,8 +44,13 @@
   }
   
   .App-link {
-    color: #61dafb;
+    color: lime;
   }
+
+  .light{
+    color: rgb(0, 174, 255)
+  }
+
   
   @keyframes App-logo-spin {
     from {
@@ -70,10 +75,20 @@
   .landing__darkMode-btn{
     background-color: lime !important;
   }
-  .landing__darkMode-btn:hover{
+/*   .landing__darkMode-btn:hover{
     background-color: rgb(87, 245, 87) !important;
-  }
+  } */
   .landing__darkMode-btn:active{
+    transform: scale(1.5,1.5);
+  }
+
+  .landing__darkMode-btn-light{
+    background-color: rgb(0, 174, 255) !important;
+  }
+/*   .landing__darkMode-btn-light:hover{
+    background-color: rgb(98, 195, 240) !important;
+  } */
+  .landing__darkMode-btn-light:active{
     transform: scale(1.5,1.5);
   }
 

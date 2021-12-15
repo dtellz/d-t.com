@@ -1,16 +1,16 @@
 import {
     Drawer,
     DrawerBody,
-    DrawerFooter,
     DrawerHeader,
     DrawerOverlay,
     DrawerContent,
-    DrawerCloseButton,
-    Button
+
 } from '@chakra-ui/react'
 import { useDisclosure } from '@chakra-ui/hooks'
 import './style.css'
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from "../../theme";
+import { useContext } from 'react';
 
 
 
@@ -19,6 +19,8 @@ import { useState } from "react"
 
 
 const Header = () => {
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
     const [traduction] = useTranslation('global');
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = useState('right')
@@ -33,14 +35,14 @@ const Header = () => {
                     <Radio value='left'>Left</Radio>
                 </Stack>
             </RadioGroup> */}
-            <input type='button' value={traduction("header.btn")} className='header__navigate-btn' onClick={onOpen} />
+            <input type='button' value={traduction("header.btn")} className={darkMode ? 'header__navigate-btn' : 'header__navigate-btn header__light'} onClick={onOpen} />
             <Drawer placement='top' onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay />
                 <DrawerContent>
-                    <DrawerHeader borderBottomWidth='1px' textAlign='center'>{traduction("header.title")}</DrawerHeader>
-                    <DrawerBody>
-                        <p>Some contents...</p>
-                        <p>Some contents...</p>
+                    <DrawerHeader className={darkMode ? 'header__drawer-header' : 'header__drawer-header-light'} borderBottomWidth='1px' textAlign='center'>{traduction("header.title")}</DrawerHeader>
+                    <DrawerBody className={darkMode ? 'header__drawer-body' : 'header__drawer-body-light'} >
+                        <p>Content coming soon...</p>
+                        <p>Content coming soon...</p>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>

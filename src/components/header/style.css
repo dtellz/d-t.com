@@ -17,4 +17,23 @@
 .header__navigate-btn:active{
     transform: scale(1.2, 1.2);
 }
+.header__light{
+    background-color: rgb(0, 174, 255) ;
+}
 
+.header__drawer-header{
+    background-color: rgb(90, 89, 89);
+    color: lime;
+}
+.header__drawer-header-light{
+    color: black;
+    background-color: white;
+}
+.header__drawer-body{
+    background-color: rgb(141, 140, 140);
+    color: white;
+}
+.header__drawer-body-light{
+    color: black;
+    background-color: white;
+}
