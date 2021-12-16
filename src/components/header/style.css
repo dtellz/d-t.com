@@ -20,6 +20,9 @@
 .header__light{
     background-color: rgb(0, 174, 255) ;
 }
+.header__light:hover{
+    background-color: rgb(97, 199, 247) !important ;
+}
 
 .header__drawer-header{
     background-color: rgb(90, 89, 89);
