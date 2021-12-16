@@ -92,6 +92,10 @@
   .landing__darkMode-btn-light:active{
     transform: scale(1.5,1.5);
   }
+  .darkmode__icon{
+    height: 30px;
+    width: 30px;
+  }
 
 
   
