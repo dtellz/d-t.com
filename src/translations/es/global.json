@@ -1,10 +1,10 @@
 {
     "landing": {
-        "welcome": "Bienvenido a ",
-        "title": "DESARROLLADOR DE SOFTWARE",
+        "title": "Soy Diego Téllez, Desarrollador de Software",
         "projects": "Mira algunos de mis",
         "github": "mejores proyectos",
-        "profile": "Visita mi"
+        "profile": "Visita mi",
+        "download": "Descarga mi"
     },
     "header": {
         "title": "BIENVENID@",
