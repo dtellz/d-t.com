@@ -20,7 +20,7 @@
     gap: 1rem;
   }
   .App-header-dark {
-    background-color: #000000;
+    background-color: ##0f0f0f;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -40,11 +40,11 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: black;
+    color: #0f0f0f;
   }
   
   .App-link {
-    color: lime;
+    color: #86ff4e;
   }
 
   .light{
@@ -73,7 +73,7 @@
     transform: scale(1.5,1.5);
   }
   .landing__darkMode-btn{
-    background-color: lime !important;
+    background-color: #86ff4e !important;
 
   }
 /*   .landing__darkMode-btn:hover{
