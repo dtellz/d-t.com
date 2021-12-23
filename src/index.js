@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './theme.js'
-import { ChakraProvider } from '@chakra-ui/react'
+
 //--------------TRANSLATION ROOT CONFIG----------
 import './i18nextConf.js'
 import { I18nextProvider } from "react-i18next"
@@ -31,11 +31,11 @@ ReactDOM.render(
     <I18nextProvider i18n={i18next}>
       <ThemeProvider>
 
-        <ChakraProvider>
 
-          <App />
 
-        </ChakraProvider>
+        <App />
+
+
 
       </ThemeProvider>
     </I18nextProvider>

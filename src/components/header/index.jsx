@@ -1,50 +1,43 @@
-import {
-    Drawer,
-    DrawerBody,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-
-} from '@chakra-ui/react'
-import { useDisclosure } from '@chakra-ui/hooks'
-import './style.css'
-import { useTranslation } from 'react-i18next';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import DarkModeSwitcher from '../../components/darkmode-switcher';
 import { ThemeContext } from "../../theme";
-import { useContext } from 'react';
-import { useState } from "react"
 
 
+import './style.css';
 
 const Header = () => {
-    const theme = useContext(ThemeContext);
+    const theme = React.useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
-    const [traduction] = useTranslation('global');
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const [placement, setPlacement] = useState('right')
 
     return (
-        <>
-            {/*    <RadioGroup defaultValue={placement} onChange={setPlacement}>
-                <Stack direction='row' mb='4'>
-                    <Radio value='top'>Top</Radio>
-                    <Radio value='right'>Right</Radio>
-                    <Radio value='bottom'>Bottom</Radio>
-                    <Radio value='left'>Left</Radio>
-                </Stack>
-            </RadioGroup> */}
-            <input type='button' value={traduction("header.btn")} className={darkMode ? 'header__navigate-btn' : 'header__navigate-btn header__light'} onClick={onOpen} />
-            <Drawer placement='top' onClose={onClose} isOpen={isOpen}>
-                <DrawerOverlay />
-                <DrawerContent>
-                    <DrawerHeader className={darkMode ? 'header__drawer-header' : 'header__drawer-header-light'} borderBottomWidth='1px' textAlign='center'>{traduction("header.title")}</DrawerHeader>
-                    <DrawerBody className={darkMode ? 'header__drawer-body' : 'header__drawer-body-light'} >
-                        <p>Content coming soon...</p>
-                        <p>Content coming soon...</p>
-                    </DrawerBody>
-                </DrawerContent>
-            </Drawer>
-        </>
-    )
+        <Box sx={{ flexGrow: 1 }} >
+            <AppBar position="static">
+                <Toolbar sx={darkMode ? { backgroundColor: 'black' } : { backgroundColor: 'gray' }} className={darkMode ? 'header__container' : 'header__container-light'}>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                    >
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        {/* News */}
+                    </Typography>
+                    <DarkModeSwitcher />
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
 }
+
 
 export default Header;
