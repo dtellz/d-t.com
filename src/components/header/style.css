@@ -1,15 +1,26 @@
 
-.header__container{
+.header__container-light{
     outline: none;
-    border-color: #9ecaed;
-    box-shadow: 0 0 15px #9ecaed;
+    border-color: #88bde9;
+    box-shadow: 0 0 15px #8ac0ec;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
-.header__container-light{
+.header__container{
     outline: none;
     border-color: #7af77a;
     box-shadow: 0 0 15px #4ff701;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+.header__glow{
+    background-color: #0f0f0f;
+    top: 'auto';
+    bottom: 0;
+}
+.header__glow-light{
+    background-color: white;
+    top: 'auto';
+    bottom: 0;
+    color: #c7c7c7
 }

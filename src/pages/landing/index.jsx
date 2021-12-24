@@ -1,4 +1,4 @@
-import logo from '../../assets/gif/in-progress.gif';
+import logo from '../../assets/softwareDev.png';
 import './style.css';
 import React, { useContext } from "react";
 import { ThemeContext } from "../../theme";
@@ -37,11 +37,11 @@ function Landing() {
             <header className={darkMode ? 'App-header-dark' : 'App-header-light'}>
                 <img src={logo} className="App-logo" alt="logo" />
 
-                <p className="landing__career">
+                <p className="landing__career landing__text">
                     {traduction("landing.title")}
                 </p>
-                <Link className={darkMode ? 'App-link' : 'App-link light'} to='/files/DiegoTellezCV.pdf' target="_blank" download >{traduction("landing.download")} CV</Link>
-                <p>{traduction("landing.projects")} <a
+                <Link className={darkMode ? 'App-link' : 'App-link light'} to='/files/DiegoTellezCV.pdf' target="_blank" download ><p className='landing__text'>{traduction("landing.download")} CV</p></Link>
+                <p className='landing__text'>{traduction("landing.projects")} <a
                     className={darkMode ? 'App-link' : 'App-link light'}
                     href="https://github.com/dtellz"
                     target="_blank"
@@ -50,7 +50,7 @@ function Landing() {
                     {traduction("landing.github")}
                 </a> </p>
 
-                <p>{traduction("landing.profile")} <a
+                <p className='landing__text'>{traduction("landing.profile")} <a
                     className={darkMode ? 'App-link' : 'App-link light'}
                     href="https://www.linkedin.com/in/diegotellezbarrero/"
                     target="_blank"

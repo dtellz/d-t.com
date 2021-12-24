@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <Box sx={{ flexGrow: 1 }} >
             <AppBar position="fixed" sx={darkMode ? { backgroundColor: '#0f0f0f', top: 'auto', bottom: 0 } : { backgroundColor: 'white', top: 'auto', bottom: 0 }}>
-                <Toolbar sx={darkMode ? { backgroundColor: 'black' } : { backgroundColor: 'gray' }} className={darkMode ? 'header__container' : 'header__container-light'}>
+                <Toolbar sx={darkMode ? { backgroundColor: 'black' } : { backgroundColor: '#c7c7c7' }} className={darkMode ? 'header__container' : 'header__container-light'}>
                     <IconButton
                         size="large"
                         edge="start"
