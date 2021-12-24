@@ -36,28 +36,30 @@ function Landing() {
             <Header />
             <header className={darkMode ? 'App-header-dark' : 'App-header-light'}>
                 <img src={logo} className="App-logo" alt="logo" />
+                <div className='landing__textBlock'>
+                    <p className="landing__career landing__text">
+                        {traduction("landing.title")}
+                    </p>
+                    <Link className={darkMode ? 'App-link' : 'App-link light'} to='/files/DiegoTellezCV.pdf' target="_blank" download ><p className='landing__text'>{traduction("landing.download")} CV</p></Link>
+                    <p className='landing__text'>{traduction("landing.projects")} <a
+                        className={darkMode ? 'App-link' : 'App-link light'}
+                        href="https://github.com/dtellz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {traduction("landing.github")}
+                    </a> </p>
 
-                <p className="landing__career landing__text">
-                    {traduction("landing.title")}
-                </p>
-                <Link className={darkMode ? 'App-link' : 'App-link light'} to='/files/DiegoTellezCV.pdf' target="_blank" download ><p className='landing__text'>{traduction("landing.download")} CV</p></Link>
-                <p className='landing__text'>{traduction("landing.projects")} <a
-                    className={darkMode ? 'App-link' : 'App-link light'}
-                    href="https://github.com/dtellz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {traduction("landing.github")}
-                </a> </p>
+                    <p className='landing__text'>{traduction("landing.profile")} <a
+                        className={darkMode ? 'App-link' : 'App-link light'}
+                        href="https://www.linkedin.com/in/diegotellezbarrero/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a> </p>
+                </div>
 
-                <p className='landing__text'>{traduction("landing.profile")} <a
-                    className={darkMode ? 'App-link' : 'App-link light'}
-                    href="https://www.linkedin.com/in/diegotellezbarrero/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a> </p>
 
                 <div className='landing__lang-btns'>
                     <img onClick={switchLanguageES} alt='es_language' src={esImg} height='25' width='25' className='landing__btn'></img>

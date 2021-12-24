@@ -96,6 +96,10 @@
   }
 
   .landing__text{
+    width: 300px;
+    
+  }
+  .landing__textBlock{
     animation-duration: 3s;
     animation-name: slideinFromRight;
   }
