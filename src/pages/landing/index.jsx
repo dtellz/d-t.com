@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import esImg from '../../assets/language/es-lang.png'
 import enImg from '../../assets/language/en-lang.png'
 import { Link } from 'react-router-dom';
-import Header from '../../components/header';
+
 /* import { GiForwardSun, GiMoonBats, GiHeraldicSun } from "react-icons/gi";
 import { FaSun } from "react-icons/fa";
 import { HiLightBulb } from "react-icons/hi"; */
@@ -33,7 +33,7 @@ function Landing() {
 
     return (
         <div className="App">
-            <Header />
+
             <header className={darkMode ? 'App-header-dark' : 'App-header-light'}>
                 <img src={logo} className="App-logo" alt="logo" />
                 <div className='landing__textBlock'>

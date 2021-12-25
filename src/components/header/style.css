@@ -2,9 +2,9 @@
 .header__container-light{
     outline: none;
     border-color: #88bde9;
-    box-shadow: 0 0 15px #8ac0ec;
+    box-shadow: 0 0 15px #6db0e7;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-right-radius: 15px; 
 }
 .header__container{
     outline: none;
@@ -23,4 +23,30 @@
     top: 'auto';
     bottom: 0;
     color: #c7c7c7
+}
+
+.header__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+}
+
+.menu-light{
+    background-color: white;
+    color: #0f0f0f;
+}
+.menu-dark{
+    background-color: #0f0f0f;
+    color: white;
+}
+.link-dark{
+    text-decoration: none;
+    color: white;
+} 
+.link-light{
+    text-decoration: none;
+    color: #0f0f0f;
 }
