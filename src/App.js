@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from './pages/landing';
-import About from './pages/about'
+import About from './pages/about';
+import Projects from "./pages/projects";
 import Header from './components/header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Landing />}></Route>
         <Route path='/about' element={<About />}></Route>
+        <Route path='/projects' element={<Projects />}></Route>
         <Route path='*' element={<Landing />}></Route>
 
       </Routes>
