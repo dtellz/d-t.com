@@ -9,6 +9,23 @@
     height: 40vmin;
     pointer-events: none;
     margin-top: -5rem;
+    animation-duration: 3s;
+    animation-name: App-logo__hides-4-now;
+  }
+  @keyframes App-logo__hides-4-now {
+    from {
+      margin-left: 10%;
+      color: transparent;
+      z-index: -1;
+      /* width: 300%; */
+    }
+  
+    to {
+      margin-left: 0%;
+      color: transparent;
+      z-index: -1;
+      /* width: 100%; */
+    }
   }
   
   /* @media (prefers-reduced-motion: no-preference) {
@@ -116,6 +133,7 @@
       /* width: 100%; */
     }
   }
+  
 
 
   .landing__lang-btns{
