@@ -8,7 +8,9 @@ const Projects = () => {
     const darkMode = theme.state.darkMode;
     return (
         <div className={darkMode ? 'about__container container-dark' : 'about__container container-light'}>
-            <h1>I'd place my best deployed projects here soon...</h1>
+            <ul>
+                <li><a className={darkMode ? 'App-link' : 'App-link light'} href='https://stream-me-up.netlify.app'>webRTC - Live video chat app</a></li>
+            </ul>
         </div>
     )
 }
