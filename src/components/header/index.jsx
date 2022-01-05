@@ -38,7 +38,7 @@ const Header = () => {
     // END OF MENU ELEMENTS
     return (
         <Box sx={{ flexGrow: 1 }} >
-            <AppBar position="fixed" sx={darkMode ? { borderRadius: '15px', backgroundColor: '#0f0f0f', top: 'auto', bottom: 0 } : { backgroundColor: '#ffffff', borderRadius: '15px', border: 'none', top: 'auto', bottom: 0 }}>
+            <AppBar position="fixed" sx={darkMode ? { borderRadius: '15px', backgroundColor: '#0f0f0f', top: 'auto', bottom: 0 } : { backgroundColor: '#ffffff', borderRadius: '150px', border: 'none', top: 'auto', bottom: 0 }}>
                 <Toolbar sx={darkMode ? { backgroundColor: 'black' } : { backgroundColor: '#c7c7c7' }} className={darkMode ? 'header__container' : 'header__container-light'}>
                     <IconButton
                         size="large"

@@ -32,6 +32,7 @@
     align-items: center;
     width: 150px;
     height: 100px;
+    border: none;
 }
 
 .menu-light{

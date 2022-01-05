@@ -14,16 +14,16 @@
   }
   @keyframes App-logo__hides-4-now {
     from {
-      margin-left: 10%;
+      margin-left: 300%;
       color: transparent;
-      z-index: -1;
+/*       z-index: -1; */
       /* width: 300%; */
     }
   
     to {
       margin-left: 0%;
       color: transparent;
-      z-index: -1;
+      /* z-index: -1; */
       /* width: 100%; */
     }
   }
