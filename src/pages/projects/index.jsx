@@ -10,6 +10,9 @@ const Projects = () => {
         <div className={darkMode ? 'about__container container-dark' : 'about__container container-light'}>
 
             <a className={darkMode ? 'App-link' : 'App-link light'} href='https://stream-me-up.netlify.app'>webRTC - Live video chat app</a>
+            <a className={darkMode ? 'App-link' : 'App-link light'} href='https://versecrypto.netlify.app'>CryptoVerse - Cryptocurrencies information site</a>
+
+
 
         </div>
     )
