@@ -34,7 +34,14 @@ function Landing() {
                 <img src={logo} className="App-logo" alt="logo" />
                 <div className='landing__textBlock'>
                     <p className="landing__career landing__text">
-                        {traduction("landing.title")}
+                        {traduction("landing.title")} <a
+                            className={darkMode ? 'App-link' : 'App-link light'}
+                            href="https://stuart.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {traduction("landing.company")}
+                        </a>
                     </p>
                     <Link className={darkMode ? 'App-link' : 'App-link light'} to='/files/DiegoTellezCV.pdf' target="_blank" download ><p className='landing__text'>{traduction("landing.download")} CV</p></Link>
                     <p className='landing__text'>{traduction("landing.projects")} <a
