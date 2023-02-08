@@ -3,7 +3,7 @@ import Landing from './pages/landing';
 import About from './pages/about';
 import Projects from "./pages/projects";
 import Header from './components/header';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
