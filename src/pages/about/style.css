@@ -1,16 +1,53 @@
-.about__container{
+.about__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-} 
-.container-dark{
+}
+
+.container-dark {
     background-color: #0f0f0f;
     color: white;
-} 
-.container-light{
+}
+
+.container-light {
     background-color: white;
     color: #0f0f0f;
+}
+
+.about__btn {
+    cursor: pointer;
+}
+
+.about__btn:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.about__btn:active {
+    transform: scale(1.5, 1.5);
+}
+
+.about__lang-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.about__text {
+    width: 80%;
+    text-align: center;
+}
+
+.ach__text {
+    width: 80%;
+    text-align: left;
+}
+
+.about__list {
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
