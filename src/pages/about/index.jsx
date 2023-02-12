@@ -38,7 +38,7 @@ const About = () => {
                         rel="noopener noreferrer"
                     >
                         {traduction("about.prelink")}
-                    </a> </h3>
+                    </a>{traduction("about.postlink")} </h3>
                 </li>
                 <li>
                     <h3 className='ach__text'>{traduction("about.ach2")}</h3>
