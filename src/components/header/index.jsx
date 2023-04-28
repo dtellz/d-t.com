@@ -9,14 +9,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import DarkModeSwitcher from '../../components/darkmode-switcher';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from "../../theme";
-
+import { useTranslation } from 'react-i18next';
 
 import './style.css';
 
 const Header = () => {
     const theme = React.useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
-
+    const [traduction, setLanguage] = useTranslation('global')
     // const navigate = useNavigate();
     /**
      * MENU ELEMENTS
@@ -67,9 +67,9 @@ const Header = () => {
                         }}
                     >
                         <div className={darkMode ? 'header__menu menu-dark' : 'header__menu menu-light'}>
-                            <Link onClick={handleClose} to='/home' className={darkMode ? 'link-dark' : 'link-light'}>Home</Link>
-                            <Link onClick={handleClose} to='/projects' className={darkMode ? 'link-dark' : 'link-light'}>Projects</Link>
-                            <Link onClick={handleClose} to='/about' className={darkMode ? 'link-dark' : 'link-light'}>About me</Link>
+                            <Link onClick={handleClose} to='/home' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.home")}</Link>
+                            <Link onClick={handleClose} to='/projects' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.projects")}</Link>
+                            <Link onClick={handleClose} to='/about' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.about")}</Link>
                         </div>
                     </Popover>
 
