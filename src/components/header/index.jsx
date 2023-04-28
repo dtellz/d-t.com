@@ -16,6 +16,7 @@ import './style.css';
 const Header = () => {
     const theme = React.useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
+    // eslint-disable-next-line no-unused-vars
     const [traduction, setLanguage] = useTranslation('global')
     // const navigate = useNavigate();
     /**
