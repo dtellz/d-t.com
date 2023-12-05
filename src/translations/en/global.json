@@ -27,5 +27,9 @@
         "ach2": "Main designer and developer of a Continuos Integration pipeline in Jenkins to allow Business Operation teams test their Python scripts before reaching production.",
         "ach3": "Leader of 'The Database CleanUp' project; it came to my attention that around 25% Applications from a NodeJs&React WebApps monorepo had an AWS t2.medium RDS Database created by default on the core app deployment pipeline. I suggested to refactor the pipeline to have the DB optionally created and started the process to delete the DB from 15 Web Apps deployed in AWS with sandbox, beta and production environments. The project was a success with 0 downtime and impact to costumers while reducing around 50k$/year our AWS bill.",
         "ach4": "Leader of the Grafana Automation Project; Built a script that would generate a Grafana dashboard for all the new applications deployed with the nodeJs stack. This script should handle previous existing app's dashboards and clone their already existing business metrics panels/rows. The project was a success and paved the way for a template base automatic dashboards management system that allow to update all the dashboard for all the company apps with changes on a templated JSON modeled dashboard"
+    },
+    "project": {
+        "production": "Check in production",
+        "source": "Source code"
     }
 }

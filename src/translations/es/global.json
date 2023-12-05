@@ -27,5 +27,9 @@
         "ach2": "Principal diseñador y desarrollador de un pipeline de Integración Continua en Jenkins para permitir a los equipos de Operaciones de Negocio probar sus scripts en Python antes de llegar a producción.",
         "ach3": "Líder del proyecto 'The Database CleanUp'; me llamó la atención que alrededor del 25% de las aplicaciones de un monorepo de aplicaciones web del stack NodeJs&React tenían una base de datos en AWS RDS tipo t2.medium  creada por defecto en el pipeline de CD al crear una nueva app. Sugerí refactorizar el pipeline para que la base de datos se creara opcionalmente y comencé el proceso para eliminar la base de datos de 15 aplicaciones web desplegadas en AWS con entornos sandbox, beta y de producción. El proyecto fue un éxito, sin downtime ni impacto para los clientes y con una reducción de alrededor de 50.000 dólares al año en nuestra factura de AWS.",
         "ach4": "Líder del Proyecto de Automatización de Grafana; Construí un script que generaría un dashboard Grafana para todas las nuevas aplicaciones desplegadas en la empresa. Este script debería manejar los dashboards de aplicaciones existentes y clonar sus paneles de métricas de negocio ya existentes. El proyecto fue un éxito y allanó el camino para un sistema de gestión de dashboards automatizado basado en plantillas que permite actualizar todos los dashboards de las aplicaciones de la empresa cambiando el modelo JSON de un template."
+    },
+    "project": {
+        "production": "Ver proyecto",
+        "source": "Codigo fuente"
     }
 }
