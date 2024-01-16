@@ -49,6 +49,9 @@ const About = () => {
                 <li>
                     <h3 className='ach__text'>{traduction("about.ach4")}</h3>
                 </li>
+                <li>
+                    <h3 className='ach__text'>{traduction("about.ach5")}</h3>
+                </li>
             </ul>
         </div >
     )
