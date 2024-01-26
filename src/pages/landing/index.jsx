@@ -5,10 +5,6 @@ import { ThemeContext } from "../../theme";
 import { useTranslation } from 'react-i18next';
 import esImg from '../../assets/language/es-lang.webp'
 import enImg from '../../assets/language/en-lang.webp'
-import { Link } from 'react-router-dom';
-
-
-
 
 function Landing() {
 
@@ -68,7 +64,6 @@ function Landing() {
                     <img onClick={switchLanguageEN} alt='en_language' src={enImg} height='25' width='25' className='landing__btn'></img>
 
                 </div>
-
 
             </header>
         </div >
