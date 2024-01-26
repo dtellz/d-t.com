@@ -27,32 +27,6 @@ const About = () => {
             <h1 className='about__text'>{traduction("about.title")}</h1>
             <h3 className='about__text'>{traduction("about.intro")}</h3>
             <h3 className='about__text'>{traduction("about.content")}</h3>
-            <p>********************************</p>
-            <h3 className='ach__text'>{traduction("about.achievements")}</h3>
-            <ul className='about__list' >
-                <li>
-                    <h3 className='ach__text'>{traduction("about.ach1")} <a
-                        className={darkMode ? 'App-link' : 'App-link light'}
-                        href="https://www.youtube.com/watch?v=2fGHnM-I8Qs&t=57s"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        {traduction("about.prelink")}
-                    </a>{traduction("about.postlink")} </h3>
-                </li>
-                <li>
-                    <h3 className='ach__text'>{traduction("about.ach2")}</h3>
-                </li>
-                <li>
-                    <h3 className='ach__text'>{traduction("about.ach3")}</h3>
-                </li>
-                <li>
-                    <h3 className='ach__text'>{traduction("about.ach4")}</h3>
-                </li>
-                <li>
-                    <h3 className='ach__text'>{traduction("about.ach5")}</h3>
-                </li>
-            </ul>
         </div >
     )
 }

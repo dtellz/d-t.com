@@ -21,8 +21,6 @@ function Landing() {
         setLanguage.changeLanguage('en')
     }
 
-
-
     return (
         <div className="App">
 
@@ -62,7 +60,6 @@ function Landing() {
                 <div className='landing__lang-btns'>
                     <img onClick={switchLanguageES} alt='es_language' src={esImg} height='25' width='25' className='landing__btn'></img>
                     <img onClick={switchLanguageEN} alt='en_language' src={enImg} height='25' width='25' className='landing__btn'></img>
-
                 </div>
 
             </header>
