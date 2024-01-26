@@ -43,7 +43,6 @@ function Landing() {
                             {traduction("landing.company")}
                         </a>
                     </p>
-                    <Link className={darkMode ? 'App-link' : 'App-link light'} to='/files/DiegoTellezCV.pdf' target="_blank" download ><p className='landing__text'>{traduction("landing.download")} CV</p></Link>
                     <p className='landing__text'>{traduction("landing.projects")} <a
                         className={darkMode ? 'App-link' : 'App-link light'}
                         href="https://github.com/dtellz"
