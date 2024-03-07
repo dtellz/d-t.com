@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import DarkModeSwitcher from '../../components/darkmode-switcher';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from "../../theme";
@@ -14,8 +15,10 @@ import { useTranslation } from 'react-i18next';
 import './style.css';
 
 const Header = () => {
+    const [isOpen, setIsOpen] = React.useState(false);
     const theme = React.useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
+    
     // eslint-disable-next-line no-unused-vars
     const [traduction, setLanguage] = useTranslation('global')
     // const navigate = useNavigate();
@@ -26,9 +29,11 @@ const Header = () => {
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
+        setIsOpen(!isOpen);
     };
 
     const handleClose = () => {
+        setIsOpen(!isOpen);
         setAnchorEl(null);
     };
 
@@ -50,7 +55,11 @@ const Header = () => {
                         onClick={handleClick}
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
+                        {isOpen ? (
+                            <CloseIcon className="icon-animation" />
+                        ) : (
+                            <MenuIcon className="icon-animation" />
+                        )}
                     </IconButton>
 
                     <Popover
