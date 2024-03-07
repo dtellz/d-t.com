@@ -10,7 +10,8 @@
     pointer-events: none;
     margin-top: -5rem;
     animation-duration: 3s;
-    animation-name: App-logo__hides-4-now;
+    /* animation-name: App-logo__hides-4-now; */
+    animation-name: slideinFromBottom;
   }
   @keyframes App-logo__hides-4-now {
     from {
@@ -118,18 +119,20 @@
   }
   .landing__textBlock{
     animation-duration: 3s;
-    animation-name: slideinFromRight;
+    animation-name: slideinFromBottom;
   }
 
   
   @keyframes slideinFromRight {
     from {
       margin-left: 100%;
+      opacity: 0;
       /* width: 300%; */
     }
   
     to {
       margin-left: 0%;
+      opacity: 1;
       /* width: 100%; */
     }
   }
@@ -140,20 +143,19 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    animation-duration: 3s;
+    animation-duration: 9s;
     animation-name: slideinFromBottom;
   }
   @keyframes slideinFromBottom {
     from {
-      margin-top: 200%;
-      height: 1000%;
+        transform: translateY(100%);
+        opacity: 0;
     }
-  
     to {
-      margin-top: 0%;
-      height: 100%;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
 
 
   

@@ -26,6 +26,7 @@
 }
 
 .header__menu{
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,4 +52,19 @@
 .link-light{
     text-decoration: none;
     color: #0f0f0f;
+}
+
+.MuiPopover-paper{
+    background-color: transparent !important;
+    background-image: none !important;
+    padding: 1rem;
+}
+
+.icon-animation {
+    transition: transform 0.3s ease-in-out;
+}
+  
+/* When the icon changes, rotate it */
+.isOpen .icon-animation {
+    transform: rotate(180deg);
 }

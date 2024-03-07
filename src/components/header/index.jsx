@@ -67,7 +67,7 @@ const Header = () => {
                             horizontal: 'center',
                         }}
                     >
-                        <div className={darkMode ? 'header__menu menu-dark' : 'header__menu menu-light'}>
+                        <div className={darkMode ? 'header__menu menu-dark header__container' : 'header__menu menu-light header__container-light'}>
                             <Link onClick={handleClose} to='/home' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.home")}</Link>
                             <Link onClick={handleClose} to='/projects' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.projects")}</Link>
                             <Link onClick={handleClose} to='/about' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.about")}</Link>
