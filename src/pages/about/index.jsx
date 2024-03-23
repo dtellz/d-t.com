@@ -27,6 +27,11 @@ const About = () => {
             <h1 className='about__text'>{traduction("about.title")}</h1>
             <h3 className='about__text'>{traduction("about.intro")}</h3>
             <h3 className='about__text'>{traduction("about.content")}</h3>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div >
     )
 }
