@@ -30,7 +30,7 @@ function Landing() {
                     <p className="landing__career landing__text">
                         {traduction("landing.title")} <a
                             className={darkMode ? 'App-link' : 'App-link light'}
-                            href="https://stuart.com"
+                            href={traduction("landing.companyUrl")}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
