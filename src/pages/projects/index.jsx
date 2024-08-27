@@ -8,6 +8,7 @@ const Projects = () => {
     const darkMode = theme.state.darkMode;
     return (
         <div className={darkMode ? 'projects__container container-dark' : 'projects__container container-light'}>
+            <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://theintellecthub.com' target='_blank' rel="noreferrer"> The Intellect Hub - AI powered learning platform</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://teletrabajo.app' target='_blank' rel="noreferrer"> teletrabajo.app - Remote role offers in Spain</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://marketplace.visualstudio.com/items?itemName=thesolutioners.testwizard' target='_blank' rel="noreferrer">TestWizard - AI unit test generation</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://github.com/dtellz/homebrew-mac-uninstall' target='_blank' rel="noreferrer">Mac-Uninstall - CLI tool for mac uninstalls</a>
