@@ -103,12 +103,12 @@ const Header = () => {
                         variant="h6" 
                         component={Link} 
                         to="/home"
+                        className={darkMode ? 'header__title-dark' : 'header__title-light'}
                         sx={{ 
                             position: 'absolute',
                             left: '50%',
                             transform: 'translateX(-50%)',
                             textDecoration: 'none',
-                            color: darkMode ? '#fff' : '#000',
                             fontWeight: 600,
                             letterSpacing: '0.5px',
                             zIndex: 1

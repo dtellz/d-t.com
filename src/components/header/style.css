@@ -99,6 +99,20 @@
     transform-origin: left;
 }
 
+.header__title-light {
+    background: linear-gradient(120deg, #00C6FF, #0072FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header__title-dark {
+    background: linear-gradient(120deg, #4CAF50, #45D1A1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
