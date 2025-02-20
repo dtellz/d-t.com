@@ -89,13 +89,6 @@ const About = () => {
                     >
                         {traduction("about.intro")}
                     </motion.div>
-
-                    <motion.div 
-                        className='about__text about__content-text'
-                        variants={itemVariants}
-                    >
-                        {traduction("about.content")}
-                    </motion.div>
                 </div>
             </motion.div>
         </motion.div>
