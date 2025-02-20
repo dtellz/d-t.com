@@ -8,5 +8,6 @@ ul {
     justify-content: top;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    min-height: calc(100vh - 64px);
+    padding-top: 64px;
 }

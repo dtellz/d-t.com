@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
-    padding-top: 5%;
-    padding-bottom: 20%;
+    min-height: calc(100vh - 64px);
+    padding: calc(64px + 5%) 2rem 5% 2rem;
+    overflow-x: hidden;
 }
 
 .container-dark {
@@ -18,38 +18,95 @@
     color: #0f0f0f;
 }
 
-.about__btn {
-    cursor: pointer;
-}
-
-.about__btn:hover {
-    transform: scale(1.2, 1.2);
-}
-
-.about__btn:active {
-    transform: scale(1.5, 1.5);
-}
-
 .about__lang-btns {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.about__btn {
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about__content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about__title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #00C6FF, #0072FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .about__text {
-    width: 80%;
-    text-align: center;
-}
-
-.ach__text {
-    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.8;
     text-align: left;
+    opacity: 0.9;
 }
 
-.about__list {
-    list-style-type: disc;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding-bottom: 20%;
+.about__intro {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.about__content-text {
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .about__container {
+        padding: 4rem 1.5rem;
+    }
+
+    .about__title {
+        font-size: 2.5rem;
+    }
+
+    .about__text {
+        font-size: 1.1rem;
+    }
+
+    .about__intro {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__container {
+        padding: 3rem 1rem;
+    }
+
+    .about__title {
+        font-size: 2rem;
+    }
+
+    .about__text {
+        font-size: 1rem;
+    }
+
+    .about__intro {
+        font-size: 1.1rem;
+    }
 }

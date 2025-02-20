@@ -1,7 +1,7 @@
-
 import React, { createContext, useReducer } from "react";
 
 export const ThemeContext = createContext();
+export const HEADER_HEIGHT = '64px';  // Standard Material-UI AppBar height
 
 const initialState = {
     darkMode: true,

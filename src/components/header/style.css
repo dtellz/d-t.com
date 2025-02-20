@@ -1,17 +1,16 @@
-
 .header__container-light{
-    outline: none;
+    border-radius: 15px;
+    margin: 1rem;
+    transition: all 0.3s ease;
     border-color: #88bde9;
     box-shadow: 0 0 15px #6db0e7;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px; 
 }
 .header__container{
-    outline: none;
+    border-radius: 15px;
+    margin: 1rem;
+    transition: all 0.3s ease;
     border-color: #7af77a;
     box-shadow: 0 0 15px #4ff701;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 .header__glow{
     background-color: #0f0f0f;
@@ -54,17 +53,59 @@
     color: #0f0f0f;
 }
 
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    transform: translateX(5px);
+    background-color: rgba(33, 150, 243, 0.1) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(45deg, #2196F3 30%, #21CBF3 90%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.icon-animation {
+    transition: transform 0.3s ease;
+}
+
+.icon-animation:hover {
+    transform: scale(1.1);
+}
+
+.isOpen .icon-animation {
+    transform: rotate(180deg);
+}
+
 .MuiPopover-paper{
     background-color: transparent !important;
     background-image: none !important;
     padding: 1rem;
-}
-
-.icon-animation {
-    transition: transform 0.3s ease-in-out;
-}
-  
-/* When the icon changes, rotate it */
-.isOpen .icon-animation {
-    transform: rotate(180deg);
 }

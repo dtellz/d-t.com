@@ -11,6 +11,7 @@ import DarkModeSwitcher from '../../components/darkmode-switcher';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from "../../theme";
 import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import './style.css';
 
@@ -18,13 +19,8 @@ const Header = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const theme = React.useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
+    const [traduction] = useTranslation('global');
     
-    // eslint-disable-next-line no-unused-vars
-    const [traduction, setLanguage] = useTranslation('global')
-    // const navigate = useNavigate();
-    /**
-     * MENU ELEMENTS
-     */
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
@@ -40,59 +36,155 @@ const Header = () => {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
+    const menuItems = [
+        { path: '/home', label: traduction('nav.home') },
+        { path: '/about', label: traduction('nav.about') },
+        { path: '/projects', label: traduction('nav.projects') }
+    ];
 
-    // END OF MENU ELEMENTS
     return (
-        <Box sx={{ flexGrow: 1 }} >
-            <AppBar position="fixed" sx={darkMode ? { borderRadius: '15px', backgroundColor: '#0f0f0f', top: 'auto', bottom: 0 } : { backgroundColor: '#ffffff', borderRadius: '150px', border: 'none', top: 'auto', bottom: 0 }}>
-                <Toolbar sx={darkMode ? { backgroundColor: 'black' } : { backgroundColor: '#c7c7c7' }} className={darkMode ? 'header__container' : 'header__container-light'}>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        aria-describedby={id}
-                        onClick={handleClick}
-                        sx={{ mr: 2 }}
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar 
+                position="fixed" 
+                sx={{
+                    ...darkMode 
+                        ? { 
+                            backgroundColor: '#0f0f0f',
+                            borderRadius: '15px',
+                            backdropFilter: 'blur(10px)',
+                        } 
+                        : { 
+                            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                            borderRadius: '15px',
+                            backdropFilter: 'blur(10px)',
+                        },
+                    top: 0,
+                    bottom: 'auto',
+                    transition: 'all 0.3s ease',
+                    boxShadow: darkMode 
+                        ? '0 -4px 6px rgba(0, 0, 0, 0.1)' 
+                        : '0 -4px 6px rgba(0, 0, 0, 0.05)'
+                }}
+            >
+                <Toolbar 
+                    className={darkMode ? 'header__container' : 'header__container-light'}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '0.5rem 1rem',
+                        position: 'relative',
+                    }}
+                >
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                        style={{ zIndex: 2 }}
                     >
-                        {isOpen ? (
-                            <CloseIcon className="icon-animation" />
-                        ) : (
-                            <MenuIcon className="icon-animation" />
-                        )}
-                    </IconButton>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color={darkMode ? 'inherit' : 'primary'}
+                            aria-label="menu"
+                            aria-describedby={id}
+                            onClick={handleClick}
+                            sx={{
+                                mr: 2,
+                                transition: 'transform 0.3s ease',
+                                transform: isOpen ? 'rotate(90deg)' : 'none'
+                            }}
+                        >
+                            {isOpen ? <CloseIcon /> : <MenuIcon />}
+                        </IconButton>
+                    </motion.div>
 
-                    <Popover
-                        id={id}
-                        open={open}
-                        anchorEl={anchorEl}
-                        onClose={handleClose}
-                        anchorOrigin={{
-                            vertical: 'center',
-                            horizontal: 'center',
-                        }}
-                        transformOrigin={{
-                            vertical: 'center',
-                            horizontal: 'center',
+                    <Typography 
+                        variant="h6" 
+                        component={Link} 
+                        to="/home"
+                        sx={{ 
+                            position: 'absolute',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            textDecoration: 'none',
+                            color: darkMode ? '#fff' : '#000',
+                            fontWeight: 600,
+                            letterSpacing: '0.5px',
+                            zIndex: 1
                         }}
                     >
-                        <div className={darkMode ? 'header__menu menu-dark header__container' : 'header__menu menu-light header__container-light'}>
-                            <Link onClick={handleClose} to='/home' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.home")}</Link>
-                            <Link onClick={handleClose} to='/projects' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.projects")}</Link>
-                            <Link onClick={handleClose} to='/about' className={darkMode ? 'link-dark' : 'link-light'}>{traduction("menu.about")}</Link>
-                        </div>
-                    </Popover>
-
-
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        {/* News */}
+                        Diego Tellez
                     </Typography>
-                    <DarkModeSwitcher />
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                        style={{ zIndex: 2 }}
+                    >
+                        <DarkModeSwitcher />
+                    </motion.div>
+
+                    <AnimatePresence>
+                        <Popover
+                            id={id}
+                            open={open}
+                            anchorEl={anchorEl}
+                            onClose={handleClose}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            transformOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            PaperProps={{
+                                sx: {
+                                    backgroundColor: darkMode ? '#1a1a1a' : '#fff',
+                                    borderRadius: '15px',
+                                    mt: -2,
+                                    boxShadow: darkMode 
+                                        ? '0 4px 6px rgba(0, 0, 0, 0.2)' 
+                                        : '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                }
+                            }}
+                        >
+                            <Box sx={{ p: 2, minWidth: '200px' }}>
+                                {menuItems.map((item, index) => (
+                                    <motion.div
+                                        key={item.path}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.1 }}
+                                    >
+                                        <Link
+                                            to={item.path}
+                                            onClick={handleClose}
+                                            style={{
+                                                textDecoration: 'none',
+                                                color: darkMode ? '#fff' : '#000',
+                                                display: 'block',
+                                                padding: '0.5rem 1rem',
+                                                margin: '0.5rem 0',
+                                                borderRadius: '8px',
+                                                transition: 'all 0.3s ease',
+                                                backgroundColor: darkMode ? '#2d2d2d' : '#f5f5f5',
+                                            }}
+                                            className="nav-link"
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </motion.div>
+                                ))}
+                            </Box>
+                        </Popover>
+                    </AnimatePresence>
                 </Toolbar>
             </AppBar>
         </Box>
     );
-}
-
+};
 
 export default Header;
