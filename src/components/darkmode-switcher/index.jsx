@@ -72,8 +72,9 @@ export default function DarkModeSwitcher() {
     return (
         <FormGroup>
             <FormControlLabel
-                control={<StyledSwitcher sx={{ m: 1 }} onClick={handleMode} checked={darkMode} />}
+                control={<StyledSwitcher sx={{ m: 0 }} onClick={handleMode} checked={darkMode} />}
                 label=""
+                sx={{ m: 0 }}
             />
         </FormGroup>
     );

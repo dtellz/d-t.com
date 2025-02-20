@@ -123,7 +123,9 @@ const Header = () => {
                         transition={{ duration: 0.5 }}
                         style={{ zIndex: 2 }}
                     >
-                        <DarkModeSwitcher />
+                        <Box sx={{ ml: 2 }}>
+                            <DarkModeSwitcher />
+                        </Box>
                     </motion.div>
 
                     <AnimatePresence>
