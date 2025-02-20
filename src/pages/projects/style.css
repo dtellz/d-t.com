@@ -7,9 +7,10 @@ ul {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: calc(100vh - 64px);
     padding-top: 124px;
+    box-sizing: border-box;
 }
 
 .projects__title {
