@@ -50,6 +50,7 @@
 
 .landing__content {
     display: flex;
+    padding-top: 64px;
     flex-direction: column;
     align-items: center;
     max-width: 800px;
