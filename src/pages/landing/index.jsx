@@ -54,41 +54,6 @@ function Landing() {
                             {traduction("landing.title")}
                         </h1>
                         
-                        <p className="landing__career landing__text">
-                            {traduction("landing.career")} {' '}
-                            <a
-                                className={`App-link ${darkMode ? '' : 'light'} hover-effect`}
-                                href={traduction("landing.companyUrl")}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {traduction("landing.company")}
-                            </a>
-                        </p>
-
-                        <p className="landing__text">
-                            {traduction("landing.projects")} {' '}
-                            <a
-                                className={`App-link ${darkMode ? '' : 'light'} hover-effect`}
-                                href="https://github.com/dtellz"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {traduction("landing.github")}
-                            </a>
-                        </p>
-
-                        <p className="landing__text">
-                            {traduction("landing.profile")} {' '}
-                            <a
-                                className={`App-link ${darkMode ? '' : 'light'} hover-effect`}
-                                href="https://www.linkedin.com/in/diegotellezbarrero/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {traduction("landing.linkedin")}
-                            </a>
-                        </p>
                     </motion.div>
 
                     <motion.div 
