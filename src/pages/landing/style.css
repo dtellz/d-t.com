@@ -57,11 +57,20 @@
 }
 
 .landing__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 2rem;
-    background: linear-gradient(45deg, #2196F3 30%, #21CBF3 90%);
+    margin: 2rem 0;
+    background: linear-gradient(120deg, #00C6FF, #0072FF);
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease-out;
+}
+
+.App-header-dark .landing__title {
+    background: linear-gradient(120deg, #4CAF50, #45D1A1);
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
