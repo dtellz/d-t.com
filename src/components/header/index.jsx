@@ -151,7 +151,7 @@ const Header = () => {
                                 }
                             }}
                         >
-                            <Box sx={{ p: 2, minWidth: '200px' }}>
+                            <Box sx={{ p: 2, minWidth: '200px' }} className={darkMode ? 'container-dark' : 'container-light'}>
                                 {menuItems.map((item, index) => (
                                     <motion.div
                                         key={item.path}
@@ -171,6 +171,8 @@ const Header = () => {
                                                 borderRadius: '8px',
                                                 transition: 'all 0.3s ease',
                                                 backgroundColor: darkMode ? '#2d2d2d' : '#f5f5f5',
+                                                position: 'relative',
+                                                overflow: 'hidden'
                                             }}
                                             className="nav-link"
                                         >
