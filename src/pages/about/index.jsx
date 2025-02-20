@@ -43,7 +43,7 @@ const About = () => {
     return (
         <motion.div 
             className={darkMode ? 'about__container container-dark' : 'about__container container-light'} 
-            style={{ overflowY: "auto" }}
+            style={{ overflowY: "auto", paddingTop: '114px' }}
             initial="hidden"
             animate="visible"
             variants={containerVariants}
