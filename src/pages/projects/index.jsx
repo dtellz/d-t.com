@@ -9,8 +9,9 @@ const Projects = () => {
     return (
         <div className={darkMode ? 'projects__container container-dark' : 'projects__container container-light'}>
             <h2 style={{ paddingBottom: '35px' }}>Live Projects</h2>
-            <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://focustimeonly.com' target='_blank' rel="noreferrer"> Focus Time Only - AI powered motivational pomodoro tracker</a>
+            <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://echoesofthecove.com' target='_blank' rel="noreferrer"> Fantasy adventure 2D RPG game</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://theintellecthub.com' target='_blank' rel="noreferrer"> The Intellect Hub - AI powered learning platform</a>
+            <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://focustimeonly.com' target='_blank' rel="noreferrer"> Focus Time Only - iOS pomodoro tracker</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://teletrabajo.app' target='_blank' rel="noreferrer"> teletrabajo.app - Remote role offers in Spain</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://marketplace.visualstudio.com/items?itemName=thesolutioners.testwizard' target='_blank' rel="noreferrer">TestWizard - AI unit test generation</a>
             <a style={{ paddingBottom: '35px' }} className={darkMode ? 'App-link' : 'App-link light'} href='https://github.com/dtellz/homebrew-mac-uninstall' target='_blank' rel="noreferrer">Mac-Uninstall - CLI tool for mac uninstalls</a>
